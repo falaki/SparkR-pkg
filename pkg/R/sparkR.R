@@ -95,8 +95,7 @@ sparkR.init <- function(
   get(".sparkRjsc", envir=.sparkREnv)
 }
 
-sparkR.setup <- function()
-
+sparkR.setup <- function() {
   if (exists(".sparkRjsc", envir=.sparkREnv)) {
     cat("Re-using existing Spark Context. Please restart R to create a new Spark Context\n")
     return(get(".sparkRjsc", envir=.sparkREnv))
